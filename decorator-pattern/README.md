@@ -17,3 +17,7 @@
 
 #### 类图
 
+https://github.com/lianpeng0011/design-pattern/blob/master/decorator-pattern/decorator-pattern.png?raw=true
+
+
+
