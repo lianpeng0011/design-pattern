@@ -1,4 +1,4 @@
-package com.lianpeng.pattern.observer.guava;
+package com.lianpeng.pattern.observer.vo;
 
 /**
  * @author lianpeng

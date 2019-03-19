@@ -9,16 +9,11 @@ public class Event {
 
     private Object source;
 
-    private String type;
-
-    public Event(String type, Object source ) {
+    public Event( Object source ) {
         this.source = source;
-        this.type = type;
     }
 
-    public void publish(String type){
-
+    public Object getSource() {
+        return source;
     }
-
-
 }

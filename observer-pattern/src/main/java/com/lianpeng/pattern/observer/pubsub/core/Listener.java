@@ -11,12 +11,23 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Listener {
 
 
-    private Map<String, Object> map = new ConcurrentHashMap<>();
+    private Map<String, EventHandle> map = new ConcurrentHashMap<>();
 
 
-    public void addListener(String type ,Object source){
+    public void addListener( String name, EventHandle tager ) {
 
-        map.put( type, source );
+        map.put( name, tager );
+    }
+
+
+    public void publishEvent( Event event ) {
+        if ( map == null ) {
+            System.out.println( "There is no reeiver for the current envet " );
+            return;
+        }
+        for ( EventHandle handle : map.values() ) {
+            handle.handler( event.getSource() );
+        }
     }
 
 
